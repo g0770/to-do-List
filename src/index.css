@@ -1,0 +1,144 @@
+body{
+    background: linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecera{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nota{
+    width: 312px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2.5%;
+}
+
+.containerSuperior{
+    width: 100%;
+    background-color: #FFF599;
+    border-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.notaSuperior{
+    width: 100%;
+    padding: 5px;
+}
+.containerIconos{
+    width: 45px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+.iconoNota{
+    width: 25px;
+}
+
+.containerInferior{
+    display: flex;
+    width: 312px;
+}
+
+.notaInferior{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF599;
+    border-top: 0px;
+    padding-left: 2%;
+}
+
+.triangulo{
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    fill: #FFF599;
+    stroke-width: 1px;
+    stroke: #000;
+    box-shadow: -6px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #FFF599;
+    border-bottom: 20px solid #FFF599;
+}
+
+.fecha{
+    color: gray;
+    font-size: medium;
+}
+
+
+.fechaLimite{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    font-size: medium;
+    color: rgb(78, 78, 78);
+}
+
+.fechaAlerta{
+    color: red;
+}
+
+
+
+#contenidoNota{
+    background-color: transparent;
+    border: 0px;
+    resize:none;
+    width: 100%;
+    font-size: large;
+    border-radius: 8px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+#contenidoNota:focus{
+    background-color: #E9E091;
+    outline: none;
+}
+
+.notitas{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: top;
+    margin-top: 2.5%;
+    flex-wrap: wrap;
+    width: 55%;
+}
+
+.checkbox{
+    width: 23px;
+    height: 23px;
+}
+
+.desactivado{
+    display: none;
+}
