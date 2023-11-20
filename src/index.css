@@ -2,11 +2,15 @@ body{
     background: linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat;
 }
 
+html, body {
+    margin:0px;
+    height:100%;
+  }
+
 #content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .cabecera{
@@ -78,6 +82,20 @@ body{
     border-bottom: 20px solid #FFF599;
 }
 
+.triangulo2{
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #FF8282;
+    border-bottom: 20px solid #FF8282;
+}
+
+.triangulo3{
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #9CBBE9;
+    border-bottom: 20px solid #9CBBE9;
+}
+
 .fecha{
     color: gray;
     font-size: medium;
@@ -120,7 +138,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 #contenidoNota:focus{
-    background-color: #E9E091;
+    background-color: rgba(0, 0, 0, 0.15);
     outline: none;
 }
 
@@ -142,3 +160,42 @@ textarea::-webkit-scrollbar-thumb {
 .desactivado{
     display: none;
 }
+
+.menu-toggle {
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 70px; 
+    left: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+.colorPicker{
+    height: 25px;
+    width: 25px;
+}
+
+.changeBackground{
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+/* #bolivia{
+    background: linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+} */

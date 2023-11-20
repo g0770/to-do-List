@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import "./index.css"
-import {Nota,Product} from './components'
+import {Nota,Product,Menu} from './components'
 import logo from "./components/images/todolistLogo.svg"
+import { IoMenuOutline, IoColorFillSharp } from "react-icons/io5";
+
 
 function App() {
   const today = new Date()
@@ -12,11 +14,10 @@ function App() {
       descripcion : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, minima assumenda voluptates cum molestias placeat est repellat quibusdam, non deserunt voluptas minus inventore nobis officiis recusandae quo provident laboriosam sint!Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quaerat doloribus nam culpa ipsa vitae ut voluptatem nostrum maiores asperiores tempora laudantium, possimus debitis consequatur laborum est accusamus, modi illum!"
     }
   ]
-  console.log(today.getMonth()+"-"+today.getDate()+"-"+today.getFullYear())
 
   return (
     <div id='content'>
-
+      <Menu/>
       <div className='cabecera'>
         <img src={logo} alt='Logo de la pagina web, "to do LIST"' />
       </div>
@@ -25,6 +26,8 @@ function App() {
         <Nota hoy={today} datos={notas[0]}/>
       </div>
     </div>
+    
+    
   )
 }
 
