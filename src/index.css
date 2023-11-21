@@ -1,11 +1,15 @@
-body{
-    background: linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat;
-}
 
 html, body {
     margin:0px;
     height:100%;
   }
+
+#content{
+    /* background-image: url(./components/images/background1.png); */
+    background-repeat: repeat;
+    background-size: cover;
+    height:100%;
+}
 
 #content{
     display: flex;
@@ -147,9 +151,11 @@ textarea::-webkit-scrollbar-thumb {
     flex-direction: row;
     gap: 5%;
     align-items: top;
+    justify-content: left;
     margin-top: 2.5%;
     flex-wrap: wrap;
-    width: 55%;
+    padding-left:12.8% ;
+    padding-right: 12.8%;
 }
 
 .checkbox{
@@ -172,6 +178,7 @@ textarea::-webkit-scrollbar-thumb {
   
   .menu {
     position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     top: 70px; 
     left: 20px;
     background-color: #333;
@@ -191,11 +198,32 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: #fff;
     padding: 5px;
+    border: 3px rgba(0, 0, 0, 0.342) solid;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* #bolivia{
-    background: linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:100vh;
-} */
+.miniBackground{
+    width: 60px;
+    height: 60px;
+    background-repeat: repeat;
+}
+
+.menuOption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+footer{
+    background-color: #333;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.selected {
+    background-color: #414141;
+  }

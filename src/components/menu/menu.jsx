@@ -2,36 +2,23 @@ import React, { useState } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
 import "../../index.css"
 import { LuWallpaper } from "react-icons/lu";
+import wp1 from "../images/background0.png"
+import wp2 from "../images/background1.png"
 
-const Menu = () => {
-  const [menuVisible, setMenuVisible] = useState(false);
+const Menu = (propiedades) => {
+  const [menuVisible, setMenuVisible] = useState(false)
+  const [selected, setSelected] = useState(0)
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
+    setMenuVisible(!menuVisible)
   };
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    setMenuVisible(false);
+    propiedades.bg(option)
+    setSelected(option);
+    setMenuVisible(false)
   };
 
-/*   useEffect(() => {
-    // Cambiar el fondo del body según la opción seleccionada
-    if (selectedOption === 'opcion1') {
-      document.body.style.background = 'linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat';
-    } else if (selectedOption === 'opcion2') {
-      // Puedes cambiar a otro fondo para la opción 2 si lo deseas
-      document.body.style.background = 'blue';
-    } else {
-      // Restablecer el fondo a su valor original si ninguna opción está seleccionada
-      document.body.style.background = 'linear-gradient(0deg, rgba(105, 25, 0, 0.42) 0%, rgba(105, 25, 0, 0.42) 100%), url(./components/images/tablerodecorcho.png), lightgray 50% / cover no-repeat';
-    }
-
-      // Limpia el efecto cuando el componente se desmonta
-      return () => {
-        document.body.style.background = '';
-      };
-    }, [selectedOption]); */
 
   return (
     <div >
@@ -42,8 +29,8 @@ const Menu = () => {
       {/* Menú desplegable */}
       {menuVisible && (
         <div className='menu'>
-           <div onClick={() => handleOptionClick('opcion1')}>Opción 1</div>
-          <div onClick={() => handleOptionClick('opcion2')}>Opción 2</div>
+          <div className={`menuOption ${selected === 0 ? 'selected' : ''}`} onClick={() => handleOptionClick(0)}> <div className="miniBackground" style={{backgroundImage: 'url("src/components/images/background0.png")'}}></div> Tablero de Corcho</div>
+          <div className={`menuOption ${selected === 1 ? 'selected' : ''}`} onClick={() => handleOptionClick(1)}> <div className="miniBackground" style={{backgroundImage: 'url("src/components/images/background1.png")'}}></div> Hoja cuadriculada</div>
         </div>
       )}
       </div>
