@@ -152,13 +152,10 @@ textarea::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: row;
     gap: 5%;
-    align-items: top;
-    justify-content: left;
     margin-top: 2.5%;
-    width: 75%; /* ESTO SOLUCIONA LO DE ABAJO PERO NOSE PORQUE CREO QUE ES UNA MALA PRACTICA - ANDRÉS */
-    flex-wrap:wrap; /* POR ALGUNA RAZON ESTO CAGA LA PAGINA, [[[[IMPORTANTE]]]] HAGANLO USTEDES YO ME CANSE - ANDRÉS*/
-    padding-left:12.8% ;
-    padding-right: 12.8%;
+    flex-wrap: wrap;
+    justify-content: center; 
+    width: 55vw;
 }
 
 .checkbox{
