@@ -2,13 +2,17 @@
 html, body {
     margin:0px;
     height:100%;
+    overflow-x: hidden;
   }
 
-#content{
+#bgFix{
     /* background-image: url(./components/images/background1.png); */
     background-repeat: repeat;
     background-size: cover;
+    position: fixed;
+    z-index: -5;
     height:100%;
+    width:100%;
 }
 
 #content{
@@ -117,8 +121,6 @@ html, body {
     color: red;
 }
 
-
-
 #contenidoNota{
     background-color: transparent;
     border: 0px;
@@ -153,7 +155,8 @@ textarea::-webkit-scrollbar-thumb {
     align-items: top;
     justify-content: left;
     margin-top: 2.5%;
-    flex-wrap: wrap;
+    width: 75%; /* ESTO SOLUCIONA LO DE ABAJO PERO NOSE PORQUE CREO QUE ES UNA MALA PRACTICA - ANDRÉS */
+    flex-wrap:wrap; /* POR ALGUNA RAZON ESTO CAGA LA PAGINA, [[[[IMPORTANTE]]]] HAGANLO USTEDES YO ME CANSE - ANDRÉS*/
     padding-left:12.8% ;
     padding-right: 12.8%;
 }
@@ -222,6 +225,8 @@ footer{
     height: 5%;
     display: flex;
     align-items: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .selected {
