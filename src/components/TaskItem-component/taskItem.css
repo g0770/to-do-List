@@ -1,0 +1,37 @@
+.nota{
+    width: 312px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2.5%;
+}
+.checkbox{
+    width: 23px;
+    height: 23px;
+}
+.notaSuperiorP{
+  width: 85%;
+}
+.description{
+    overflow-y: auto;
+    word-wrap: break-word;
+    max-height: 175px;
+    resize:none;
+    width: 100%;
+    font-size: large;
+    padding: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }

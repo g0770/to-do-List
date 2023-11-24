@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
 import "../../index.css"
+import "./menu.css"
 import { LuWallpaper } from "react-icons/lu";
-import wp1 from "../images/background0.png"
-import wp2 from "../images/background1.png"
 
 const Menu = (propiedades) => {
   const [menuVisible, setMenuVisible] = useState(false)
@@ -29,8 +28,8 @@ const Menu = (propiedades) => {
       {/* Menú desplegable */}
       {menuVisible && (
         <div className='menu'>
-          <div className={`menuOption ${selected === 0 ? 'selected' : ''}`} onClick={() => handleOptionClick(0)}> <div className="miniBackground" style={{backgroundImage: 'url("src/components/images/background0.png")'}}></div> Tablero de Corcho</div>
-          <div className={`menuOption ${selected === 1 ? 'selected' : ''}`} onClick={() => handleOptionClick(1)}> <div className="miniBackground" style={{backgroundImage: 'url("src/components/images/background1.png")'}}></div> Hoja cuadriculada</div>
+          <div className={`menuOption ${selected === 0 ? 'selected' : ''}`} onClick={() => handleOptionClick(0)}> <div className="miniBackground" style={{backgroundImage: 'url("src/components/Menu-component/imgs/background0.png")'}}></div> Tablero de Corcho</div>
+          <div className={`menuOption ${selected === 1 ? 'selected' : ''}`} onClick={() => handleOptionClick(1)}> <div className="miniBackground" style={{backgroundImage: 'url("src/components/Menu-component/imgs/background1.png")'}}></div> Hoja cuadriculada</div>
         </div>
       )}
       </div>
