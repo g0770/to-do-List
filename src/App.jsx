@@ -40,11 +40,12 @@ function App() {
         <img src={logo} alt='Logo de la pagina web, "to do LIST"' height="200vp" onClick={resetTask}/>
         </header>
       <div className="notitas">
+        
+        <TaskList tasks={tasks} deleteTask={deleteTask}/>
         <div className='alinearNota'> 
           <TaskForm addTask={addTask} />
         </div>
-        <TaskList tasks={tasks} deleteTask={deleteTask}/>
-      </div>  
+      </div>
     </div>
   )
 }

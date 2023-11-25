@@ -4,12 +4,12 @@ import addIcon from "../../images/add.svg" //hay que usar react icon
 import deleteIcon from "../../images/delete.svg" //hay que usar react icon
 import { IoColorFillSharp } from "react-icons/io5";
 import "./taskItem.css"
-const TaskItem = ({ task,deleteTask }) => {
+const TaskItem = ({ task,deleteTask,changeLinetrough }) => {
     const colors = ["#FFF599", "#FF8282", "#9CBBE9"];
     const colorsTachado = ["#C5BD77", "#D16C6C", "#7C95BB"];
   
     const [colorIndex, setColorIndex] = useState(task.color);
-    const [tachado, setTachado] = useState(false);
+    const [linetrough, setLinetrough] = useState(task.linetrough);
   
     const handleColorChange = () => {
       const newIndex = (colorIndex + 1) % colors.length;
@@ -17,7 +17,7 @@ const TaskItem = ({ task,deleteTask }) => {
     };
   
     const handleChangeCheckbox = () => {
-      setTachado(!tachado);
+      setLinetrough(!linetrough);
     };
   
     const trianguloStyle = {
@@ -28,9 +28,9 @@ const TaskItem = ({ task,deleteTask }) => {
     return (
       <div>
         <div className="nota">
-          <div className="containerSuperior" style={ !tachado ? { backgroundColor: colors[colorIndex] } :{ backgroundColor: colorsTachado[colorIndex] } }>
+          <div className="containerSuperior" style={ !linetrough ? { backgroundColor: colors[colorIndex] } :{ backgroundColor: colorsTachado[colorIndex] } }>
             <div className='notaSuperiorP'>
-              <textarea name="textareaNota" className="contenidoNota" disabled style={{ textDecoration: tachado ? "line-through" : "none" }}>{task.description}</textarea>
+              <textarea name="textareaNota" className="contenidoNota" disabled style={{ textDecoration: linetrough ? "line-through" : "none" }}>{task.description}</textarea>
             </div>
             <div className='containerIconos'>
               <input type="checkbox" className='checkbox' onClick={handleChangeCheckbox} />
@@ -43,7 +43,7 @@ const TaskItem = ({ task,deleteTask }) => {
             </div>
           </div>
           <div className='containerInferior'>
-            <div className='notaInferior' style={ !tachado ? { backgroundColor: colors[colorIndex] } :{ backgroundColor: colorsTachado[colorIndex] } }>
+            <div className='notaInferior' style={ !linetrough ? { backgroundColor: colors[colorIndex] } :{ backgroundColor: colorsTachado[colorIndex] } }>
               <span className='fecha'>Fecha de creación: {task.creacion}</span> 
               {task.fechaLimite && <span className='fecha'>Fecha límite: {task.fechaLimite}</span>}
             </div>

@@ -29,18 +29,16 @@ html, body {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: start; 
+  justify-content: center; 
   margin-top: 2.5%;
   flex-wrap:wrap;
   width: 100%;
-  padding-left: 12%;
-  padding-right: 12%;
 }
 
 .alinearNota{
-  width: 33.3%;
   display: flex;
   justify-content: center;
   align-items: top;
   padding: 0;
+  margin: 1%;
 }

@@ -13,6 +13,7 @@ const TaskForm = ({addTask}) => {
       const newIndex = (colorIndex + 1) % colors.length;
       setColorIndex(newIndex);
     };
+
   
     const trianguloStyle = {
       borderLeftColor: colors[colorIndex],
@@ -34,9 +35,13 @@ const TaskForm = ({addTask}) => {
             fechaLimite: fechaLimite,
             creacion: fechaActual,
             id: uuidv4(),
-            color: colorIndex
+            color: colorIndex,
+            linetrough: false
         }
         addTask(newTask);
+        e.target.textareaNota.value = ""
+        e.target.fechaLimite.value = undefined
+        setColorIndex(0)
     }
     return(
         <form className='notaMadre' onSubmit={handleSubmitTask}>
