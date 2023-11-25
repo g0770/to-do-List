@@ -1,8 +1,6 @@
-# to do List
+# React + Vite
 
-Lista de quehaceres con una interfaz la cual intenta simular una "pared" de la vida real, con notas pegadas a la misma. Cuenta con funcionalidades como: fecha limite y de creacion, cambio de color, cambio de background, diseño responsivo, borrado entero, entre otros.
-
-Se debio utilizar --force, sin embargo en un futuro se podran ver actualizaciones anteriores.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
