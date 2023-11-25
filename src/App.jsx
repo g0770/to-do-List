@@ -13,7 +13,7 @@ function App() {
     setBg(newId)
   }
 
-  const tasksGuardadas = JSON.parse(localStorage.getItem("tasks"))
+  const tasksGuardadas = JSON.parse(localStorage.getItem("tasks")) || []
   const [tasks, setTasks] = useState(tasksGuardadas)
 
   const addTask = (task) =>{
@@ -40,7 +40,9 @@ function App() {
         <img src={logo} alt='Logo de la pagina web, "to do LIST"' height="200vp" onClick={resetTask}/>
         </header>
       <div className="notitas">
-        <TaskForm addTask={addTask}/>
+        <div className='alinearNota'> 
+          <TaskForm addTask={addTask} />
+        </div>
         <TaskList tasks={tasks} deleteTask={deleteTask}/>
       </div>  
     </div>
