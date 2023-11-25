@@ -29,6 +29,9 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   },[tasks])
 
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter(task => task.id != taskId))}
+
   return (
     <div id='content' >
       <div id="bgFix" style={{backgroundImage: 'url(src/components/Menu-component/imgs/background'+fondo+'.png)'}}></div>
@@ -38,7 +41,7 @@ function App() {
         </header>
       <div className="notitas">
         <TaskForm addTask={addTask}/>
-        <TaskList tasks={tasks}/>
+        <TaskList tasks={tasks} deleteTask={deleteTask}/>
       </div>  
     </div>
   )
