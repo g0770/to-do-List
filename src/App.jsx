@@ -5,6 +5,7 @@ import { Menu } from './components/Menu-component/menu';
 import { TaskForm } from './components/TaskForm-component/taskForm';
 import  TaskList  from './components/TaskList-component/taskList';
 import logo from "./images/todolistLogo.svg"
+import { TiDelete } from "react-icons/ti";
 
 function App() {
 
@@ -62,8 +63,11 @@ function App() {
     <div id='content' onLoad={handleCustomBackgroundClick}>
       <div id="bgFix" style={{backgroundImage: bgId === 6 ? `url(${customBackground})` : 'url(src/components/Menu-component/imgs/background'+bgId+'.png)'}}></div>
       <Menu bgId={bgId} bg={changeBg} customBg={customBackground} handleBgClick={handleCustomBackgroundClick} setCustomBg={setCustomBackground} imgUpload={handleImageUpload} inputRef={inputRef}/>
+      <div className='delete'>
+      <TiDelete size={30} onClick={resetTask}/>
+      </div>
       <header className='cabecera' >
-        <img src={logo} alt='Logo de la pagina web, "to do LIST"' height="200vp" onClick={resetTask}/>
+        <img src={logo} alt='Logo de la pagina web, "to do LIST"' height="200vp"/>
         </header>
       <div className="notitas">
         
