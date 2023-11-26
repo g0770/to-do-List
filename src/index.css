@@ -60,3 +60,12 @@ header{
   padding: 0;
   margin: 1%;
 }
+
+.delete{
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 28px;
+  left: 90px;
+  z-index: 1;
+}
