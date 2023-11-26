@@ -1,10 +1,9 @@
 import React, {useEffect, useState, useRef} from 'react'
 import "./index.css"
-import { IoMenuOutline, IoColorFillSharp } from "react-icons/io5";
 import { Menu } from './components/Menu-component/menu';
 import { TaskForm } from './components/TaskForm-component/taskForm';
 import  TaskList  from './components/TaskList-component/taskList';
-import logo from "./images/todolistLogo.svg"
+import { ClearAllTasks } from './components/Clear-All-Tasks/clearAllTasks';
 
 function App() {
 
@@ -34,8 +33,10 @@ function App() {
   }
 
   const handleCustomBackgroundClick = () => {
-    inputRef.current.click()
-    changeBg(6)
+    if (inputRef.current) {
+      inputRef.current.click();
+      changeBg(6);
+    }
   };
 
   const tasksGuardadas = JSON.parse(localStorage.getItem("tasks")) || []
@@ -61,16 +62,19 @@ function App() {
   return (
     <div id='content' onLoad={handleCustomBackgroundClick}>
       <div id="bgFix" style={{backgroundImage: bgId === 6 ? `url(${customBackground})` : 'url(src/components/Menu-component/imgs/background'+bgId+'.png)'}}></div>
-      <Menu bgId={bgId} bg={changeBg} customBg={customBackground} handleBgClick={handleCustomBackgroundClick} setCustomBg={setCustomBackground} imgUpload={handleImageUpload} inputRef={inputRef}/>
-      <header className='cabecera' >
-        <img src={logo} alt='Logo de la pagina web, "to do LIST"' height="200vp" onClick={resetTask}/>
+      <header>
+        <div className="container-botones">
+        <Menu bgId={bgId} bg={changeBg} customBg={customBackground} handleBgClick={handleCustomBackgroundClick} setCustomBg={setCustomBackground} imgUpload={handleImageUpload} inputRef={inputRef}/>
+        <ClearAllTasks resetTask={resetTask}/>
+        </div>
+        <div className='cabecera' >
+        </div>
         </header>
       <div className="notitas">
-        
-        <TaskList tasks={tasks} deleteTask={deleteTask}/>
         <div className='alinearNota'> 
-          <TaskForm addTask={addTask} />
+            <TaskForm addTask={addTask} />
         </div>
+        <TaskList tasks={tasks} deleteTask={deleteTask}/>
       </div>
     </div>
   )

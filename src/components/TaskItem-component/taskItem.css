@@ -6,6 +6,12 @@
     flex-direction: column;
     margin-bottom: 4.5%;
 }
+
+.fechaAlerta{
+  color: red;
+  font-weight: bolder;
+}
+
 .checkbox{
     width: 23px;
     height: 23px;

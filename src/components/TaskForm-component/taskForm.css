@@ -88,9 +88,7 @@ textarea::-webkit-scrollbar-thumb {
     font-size: medium;
     color: rgb(78, 78, 78);
 }
-.fechaAlerta{
-    color: red;
-}
+
 .triangulo{
     transform: rotate(90deg);
     flex-shrink: 0;
@@ -104,5 +102,7 @@ textarea::-webkit-scrollbar-thumb {
     border-left: 20px solid #FFF599;
     border-bottom: 20px solid #FFF599;
 }
+
+
 
 

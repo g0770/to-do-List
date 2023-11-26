@@ -1,0 +1,40 @@
+.container-clear-button{
+    cursor: pointer;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+ }
+
+ .button-clear{
+    cursor: pointer;
+     background-color: transparent;
+     width: 50px;
+     height: 50px;
+     border-radius: 8px;
+     background-color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 3px rgba(0, 0, 0, 0.342) solid;
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+ }
+ .clear-all{
+     width: 50px;
+     height: 50px;
+ }
+ 
+ @media only screen and (max-width: 768px) {
+     .container-clear-button{
+         height: 30px;
+         width: 30px;
+         margin: 0;
+      }
+     .button-clear{
+         height: 30px;
+         width: 30px;
+     }
+     .clear-all{
+         height: 30px;
+         width: 30px;
+     }
+   }

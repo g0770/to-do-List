@@ -6,7 +6,7 @@ const TaskList = ({tasks,deleteTask}) => {
     return (
 
         tasks.map(task => (
-            <div className="alinearNota">
+            <div className="alinearNota" key={task.id}> 
             <TaskItem key={task.id} task={task} deleteTask={deleteTask}/>
             </div>
         ))

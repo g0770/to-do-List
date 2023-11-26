@@ -1,12 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import addIcon from "../../images/add.svg" //hay que usar react icon
-import deleteIcon from "../../images/delete.svg" //hay que usar react icon
-import { IoColorFillSharp } from "react-icons/io5";
+import { FaTrashAlt } from "react-icons/fa";
 import "./taskItem.css"
-const TaskItem = ({ task,deleteTask,changeLinetrough }) => {
+const TaskItem = ({ task,deleteTask}) => {
     const colors = ["#FFF599", "#FF8282", "#9CBBE9"];
-    const colorsTachado = ["#C5BD77", "#D16C6C", "#7C95BB"];
   
     const [colorIndex, setColorIndex] = useState(task.color);
     const [linetrough, setLinetrough] = useState(task.linetrough);
@@ -24,28 +21,31 @@ const TaskItem = ({ task,deleteTask,changeLinetrough }) => {
       borderLeftColor: colors[colorIndex],
       borderBottomColor: colors[colorIndex],
     };
+
+    const today = new Date()
+    const limit = Date.parse(task.fechaLimite)
+    let fechaAlerta = false
+
+    limit < today ? fechaAlerta = true : {}
     
     return (
       <div>
-        <div className="nota">
-          <div className="containerSuperior" style={ !linetrough ? { backgroundColor: colors[colorIndex] } :{ backgroundColor: colorsTachado[colorIndex] } }>
+        <div className="nota" style={linetrough ? { filter: "brightness(50%)" } : {}}>
+          <div className="containerSuperior" style={{backgroundColor: colors[colorIndex]}}>
             <div className='notaSuperiorP'>
-              <textarea name="textareaNota" className="contenidoNota" disabled style={{ textDecoration: linetrough ? "line-through" : "none" }}>{task.description}</textarea>
+              <textarea name="textareaNota" value={task.description} className="contenidoNota" disabled style={{ textDecoration: linetrough ? "line-through" : "none" }}></textarea>
             </div>
             <div className='containerIconos'>
               <input type="checkbox" className='checkbox' onClick={handleChangeCheckbox} />
               <button className="buttonIcon" type='button'>
-                <img className='iconoNota' src={deleteIcon} alt="delete" onClick={() => deleteTask(task.id)}/>
-              </button>
-              <button className="buttonIcon" type='button'>
-                <IoColorFillSharp className='colorPicker' onClick={handleColorChange}/> 
+                <FaTrashAlt className='iconoNota colorPicker' alt="delete" onClick={() => deleteTask(task.id)}/>
               </button>
             </div>
           </div>
           <div className='containerInferior'>
-            <div className='notaInferior' style={ !linetrough ? { backgroundColor: colors[colorIndex] } :{ backgroundColor: colorsTachado[colorIndex] } }>
+            <div className='notaInferior' style={{backgroundColor: colors[colorIndex]}}>
               <span className='fecha'>Fecha de creación: {task.creacion}</span> 
-              {task.fechaLimite && <span className='fecha'>Fecha límite: {task.fechaLimite}</span>}
+              {task.fechaLimite && <span className={"fecha "+(fechaAlerta ? "fechaAlerta": "")}>Fecha límite: {task.fechaLimite}</span>}
             </div>
             <div className="triangulo" style={trianguloStyle}></div>
           </div>

@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
-import addIcon from "../../images/add.svg" //hay que usar react icon
 import { IoColorFillSharp } from "react-icons/io5";
 import "./taskForm.css"
 import { v4 as uuidv4 } from 'uuid';
+
+import { FaPlusCircle } from "react-icons/fa";  
+
 const TaskForm = ({addTask}) => {
     const colors = ["#FFF599", "#FF8282", "#9CBBE9"];
-    const colorsTachado = ["#C5BD77", "#D16C6C", "#7C95BB"];
   
     const [colorIndex, setColorIndex] = useState(0);
   
@@ -51,11 +52,12 @@ const TaskForm = ({addTask}) => {
                 </div>
                 <div className='containerIconos'>
                     <button className="buttonIcon" type='submit'>
-                        <img className='iconoNota' src={addIcon} alt="add"/>
+                        <FaPlusCircle className='iconoNota colorPicker' alt="add"/>
                     </button>
                     <button className="buttonIcon" type='button'>
                         <IoColorFillSharp className='colorPicker' onClick={handleColorChange}/> 
                     </button>
+                
                 </div>
             </div>    
             <div className='containerInferior'>
