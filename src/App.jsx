@@ -64,12 +64,10 @@ function App() {
       <div id="bgFix" style={{backgroundImage: bgId === 6 ? `url(${customBackground})` : 'url(src/components/Menu-component/imgs/background'+bgId+'.png)'}}></div>
       <header>
         <div className="container-botones">
-        <Menu bgId={bgId} bg={changeBg} customBg={customBackground} handleBgClick={handleCustomBackgroundClick} setCustomBg={setCustomBackground} imgUpload={handleImageUpload} inputRef={inputRef}/>
-        <ClearAllTasks resetTask={resetTask}/>
+          <Menu bgId={bgId} bg={changeBg} customBg={customBackground} handleBgClick={handleCustomBackgroundClick} setCustomBg={setCustomBackground} imgUpload={handleImageUpload} inputRef={inputRef}/>
+          <ClearAllTasks resetTask={resetTask}/>
         </div>
-        <div className='cabecera' >
-        </div>
-        </header>
+      </header>
       <div className="notitas">
         <div className='alinearNota'> 
             <TaskForm addTask={addTask} />

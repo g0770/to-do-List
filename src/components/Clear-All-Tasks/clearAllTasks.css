@@ -3,6 +3,8 @@
     height: 50px;
     margin-left: 20px;
     margin-top: 20px;
+    position: fixed;
+    margin-top: 72px;
  }
 
  .button-clear{
@@ -17,6 +19,7 @@
      justify-content: center;
      border: 3px rgba(0, 0, 0, 0.342) solid;
      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+     
  }
  .clear-all{
      width: 50px;
@@ -28,6 +31,8 @@
          height: 30px;
          width: 30px;
          margin: 0;
+         margin-left: 20px;
+         margin-top: 72px;
       }
      .button-clear{
          height: 30px;

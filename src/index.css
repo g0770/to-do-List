@@ -21,28 +21,41 @@ html, body {
 header{
   display: flex;
   width: 100%;
-  height: 200px;
+  height: 230px;
   background-image: url("./images/todolistLogo.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30%;
+  background-size: 500px;
+  background-position-y: 10%;
 }
 .container-botones{
   display: flex;
   flex-direction: column;
   height: 100px;
 }
-.cabecera{
-  margin: 0 auto;
-}
+
 @media only screen and (max-width: 768px) {
-  .cabecera{
-    width: 50%;
+  header{
+    background-size: cover;
+    background-position-x: 0%;
   }
 }
-.imagenLogo{
-  width: 100%;
+
+@media only screen and (max-width: 768px) {
+  header{
+    background-size: 65%;
+    background-position-x: center;
+  }
 }
+
+@media only screen and (max-width: 550px) {
+  header{
+    background-size: 350px;
+    background-position-x: center;
+  }
+}
+
+
 .notitas{
   margin: 0 auto;
   display: flex;
