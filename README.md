@@ -4,6 +4,8 @@ Bienvenidos, este proyecto "to do list" intenta simular una pared de la vida rea
 
 Fue hecho para el trabajo final del segundo tramo de Argentina Programa, por los alumnos Andrés Morales, Sebastián Kraus, Alejandro Ayala, Julian Bidone.
 
+PD: por serios problemas con los commits decidimos hacer un hard reset, sin embargo actualizaciones anteriores estan en [@sebakraus150/to-do-List](https://github.com/sebakraus150/to-do-List/tree/branch-sk).
+
 Plugins utilizados:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
