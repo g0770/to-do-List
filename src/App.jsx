@@ -35,7 +35,6 @@ function App() {
   const handleCustomBackgroundClick = () => {
     if (inputRef.current) {
       inputRef.current.click();
-      changeBg(6);
     }
   };
 
